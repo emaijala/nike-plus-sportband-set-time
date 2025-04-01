@@ -77,9 +77,14 @@ func main() {
 		println("Custom date and time: ", t.Format("2006-01-02 15:04:05 MST"))
 	}
 
-	println("Setting time on device...")
+	println("Setting time on device")
 
 	ts := t.Unix()
+
+	if st.IsDST() {
+		println("Adjusting for Daylight Savings Time")
+		ts += 3600
+	}
 
 	//converting timestamp into slice of 4 bytes
 	tb := [4]byte{
