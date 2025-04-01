@@ -6,6 +6,8 @@ After Nike shut down web app few years ago, device became useless. However it ca
 ## Requirements
 You will need https://pkg.go.dev/github.com/google/gousb as a dependency, which underneath uses https://github.com/libusb/libusb/wiki
 
+Easiest way to install gousb is with the following command: `go mod download`.
+
 ## Running (the tool...)
 In order to access device on USB port, I had to run built executable with SUDO.
 
