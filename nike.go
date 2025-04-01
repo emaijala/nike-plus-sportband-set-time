@@ -96,5 +96,5 @@ func main() {
 		log.Fatalf("Error while setting time on device: %v", err)
 	}
 
-	println("Time on device has been successfully set to ", t.Format("15:04"))
+	println("Time on device has been successfully set to", t.Format("15:04:05"))
 }
